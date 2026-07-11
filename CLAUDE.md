@@ -8,6 +8,10 @@ never assumed from this document.** The fix described here was derived on one re
 machine; the *values* (kernel versions, UUIDs, offsets, paths) were specific to it
 and are deliberately not repeated here.
 
+This document is self-contained — it's everything you need to diagnose, fix, verify,
+and harden the problem end to end. (A `README.md` alongside it is the same fix written
+as a walkthrough for a human doing it by hand; you don't need it.)
+
 ---
 
 ## The result you are driving toward
@@ -26,8 +30,10 @@ a package update can't silently break it again.
    paths — get them from the machine.
 2. **One variable per change.** Change one thing, test, observe, and revert it if it
    didn't help. Batching changes destroys the signal.
-3. **Keep a log.** Record each step as: hypothesis → command → output → conclusion →
-   next step. If the repo has a `debug-log.md`, append to it.
+3. **Keep a running log.** Record each step as: hypothesis → command → output →
+   conclusion → next step. Create a `debug-log.md` in your working directory to hold
+   it (or, if the user prefers, keep the running record in the conversation). It's
+   your audit trail if a change needs to be undone.
 4. **Confirm before system changes.** Creating swap, editing the kernel command line,
    and rebuilding the initramfs are real, semi-persistent changes. Explain what you're
    about to do and why, then proceed. Anything hard to reverse: confirm first.
