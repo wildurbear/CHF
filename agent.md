@@ -1,4 +1,8 @@
-# CLAUDE.md — NVIDIA Blackwell hibernate (`-5` on resume) fix playbook
+# agent.md — NVIDIA Blackwell hibernate (`-5` on resume) fix playbook
+
+<!-- If your AI tool auto-loads a specific filename (e.g. CLAUDE.md or AGENT.md),
+     you can rename this file to match; the contents are what matter. -->
+
 
 You are an AI assistant helping a user get **hibernate (S4, suspend-to-disk)**
 working on **their own Linux machine**. Suspend (S3) usually already works;
